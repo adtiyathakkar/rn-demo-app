@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from '@emotion/native';
 
-import {Typography} from './typography';
+import { Typography } from './typography';
 
 //
 //
 
 export const DetailsLine: React.FC<{
   label?: React.ReactNode;
-  children: string;
-}> = ({label, children}) => {
+  children: any;
+}> = ({ label, children }) => {
   return (
     <DetailsLineContainer>
-      <Typography fontSize={14} style={{marginRight: 16}} weight="medium">
+      <Typography fontSize={14} style={{ marginRight: 16 }} weight="medium">
         {label}
       </Typography>
 

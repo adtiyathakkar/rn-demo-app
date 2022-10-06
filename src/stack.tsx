@@ -1,10 +1,10 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import ListScreen, { IListItem } from './screens/list';
-import {Item} from './item';
+import { Item } from './item';
 
-import {ThemeFont} from './components/typography';
+import { ThemeFont } from './components/typography';
 
 //
 //
@@ -34,12 +34,12 @@ const Stack = () => {
       <RootStack.Screen
         name="ListScreen"
         component={ListScreen}
-        options={{title: 'Items'}}
+        options={{ title: 'Items' }}
       />
       <RootStack.Screen
         name="ItemScreen"
         component={Item}
-        options={{title: 'Item'}}
+        options={{ title: 'Item' }}
       />
     </RootStack.Navigator>
   );

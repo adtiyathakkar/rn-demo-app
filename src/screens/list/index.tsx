@@ -1,9 +1,9 @@
 import React from 'react';
-import {ScrollView} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import { FlatList, ScrollView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import ListData from '../../utils/fake-data';
-import {ListItem} from './components/item';
+import { ListItem } from './components/item';
 
 //
 //
@@ -14,15 +14,19 @@ export interface IListItem {
   description: String;
   price: string;
   salePrice: any;
-  brand: String;
+  brand: string;
 }
 
-const ListScreen = () => {
+export const ListScreen = () => {
   return (
     <SafeAreaView edges={['top', 'bottom']}>
-      <ScrollView contentContainerStyle={{paddingHorizontal: 16}}>
+      <FlatList
+        data={ListData}
+        renderItem={({ item }) => <ListItem key={item.id} item={item} />}
+      />
+      {/* <ScrollView contentContainerStyle={{ paddingHorizontal: 16 }}>
         {ListData.map(item => <ListItem key={item.id} item={item} />)}
-      </ScrollView>
+      </ScrollView> */}
     </SafeAreaView>
   );
 };
